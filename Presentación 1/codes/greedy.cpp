@@ -103,30 +103,27 @@ bool asignarCurso(const Instancia& instancia, Solucion& solucion, int indiceCurs
 
 Solucion greedy(const Instancia& instancia) {
 
-    // Obtener el orden de prioridad de los cursos
     vector<int> orden = ordenarCursos(instancia);
 
-    // Probar distintas rotaciones del orden
     for (size_t  intento = 0; intento < orden.size(); ++intento) {
 
-        // Inicializar una solución vacía
         Solucion solucion = inicializarSolucion(instancia);
 
         bool factible = true;
 
-        // Recorrer los cursos en orden circular
+
         for (size_t  i = 0; i < orden.size(); ++i) {
 
             int indiceCurso = orden[(intento + i) % orden.size()];
 
-            // Intentar asignar todas las lectures del curso
+            // asignar las lectures del curso
             if (!asignarCurso(instancia, solucion, indiceCurso)) {
                 factible = false;
                 break;
             }
         }
 
-        // Si todos los cursos fueron asignados, retornar solución
+        // retornar solución
         if (factible) {
             return solucion;
         }

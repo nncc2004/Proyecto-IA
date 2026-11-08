@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{Ceschia2023Educational}
+Sara Ceschia, Luca Di~Gaspero, and Andrea Schaerf.
+\newblock Educational timetabling: Problems, benchmarks, and state-of-the-art
+  results.
+\newblock {\em European Journal of Operational Research}, 308:1--18, 2022.
+
+\bibitem{Cosar2022Greedy}
+Batuhan~Mustafa Co{\c{s}}ar, Bilge Say, and Tansel D{\"o}kero{\u{g}}lu.
+\newblock A new greedy algorithm for the curriculum-based course timetabling
+  problem.
+\newblock {\em D{\"u}zce {\"U}niversitesi Bilim ve Teknoloji Dergisi}, 2022.
+
+\bibitem{Bonutti2012Benchmarking}
+Fabio De~Cesco, Luca Di~Gaspero, Andrea Schaerf, and Alex Bonutti.
+\newblock Benchmarking curriculum-based course timetabling: Formulations, data
+  formats, instances, validation, visualization, and results.
+\newblock {\em Annals of Operations Research}, 194(1):59--70, 2012.
+
+\bibitem{DeCoster2022AlgorithmSelection}
+Arnaud De~Coster, Nysret Musliu, Andrea Schaerf, Johannes Schoisswohl, and Kate
+  Smith-Miles.
+\newblock Algorithm selection and instance space analysis for curriculum-based
+  course timetabling.
+\newblock {\em Journal of Scheduling}, 25:35--58, 2021.
+
+\bibitem{DiGaspero2007ITC}
+Luca Di~Gaspero, Andrea Schaerf, and Barry McCollum.
+\newblock The second international timetabling competition (itc-2007):
+  Curriculum-based course timetabling (track 3).
+\newblock In {\em Proceedings of the Second International Timetabling
+  Competition}, 2007.
+
+\bibitem{Feutrier2023Landscape}
+Thomas Feutrier.
+\newblock {\em Landscape Analysis and Solver Reconfiguration for the
+  Curriculum-Based Course Timetabling}.
+\newblock Phd thesis, Universit\'e de Lille, 2023.
+
+\bibitem{Hao2011LowerBounds}
+Jin-Kao Hao and Una Benlic.
+\newblock Lower bounds for the itc-2007 curriculum-based course timetabling
+  problem.
+\newblock {\em European Journal of Operational Research}, 212(3):464--472,
+  2011.
+
+\end{thebibliography}

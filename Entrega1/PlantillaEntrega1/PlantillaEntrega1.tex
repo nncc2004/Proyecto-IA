@@ -1,0 +1,361 @@
+\documentclass[letter, 10pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage[top=3cm,bottom=3cm,left=3.5cm,right=3.5cm,footskip=1.5cm,headheight=1.5cm,headsep=.5cm,textheight=3cm]{geometry}
+
+
+
+\begin{document}
+\title{Inteligencia Artificial \\ \begin{Large}Estado del Arte: Curriculum-Based Course Timetabling \\(CB- CTT)\end{Large}}
+\author{Nicol\'as Chehade Casivar \\ 202373508-6}
+\date{\today}
+\maketitle
+
+
+%--------------------No borrar esta secci\'on--------------------------------%
+\section{Evaluaci\'on}
+
+\begin{tabular}{ll}
+Resumen (5\%): & \underline{\hspace{2cm}} \\
+Introducci\'on (5\%):  & \underline{\hspace{2cm}} \\
+Definici\'on del Problema (10\%):  & \underline{\hspace{2cm}} \\
+Estado del Arte (40\%):  & \underline{\hspace{2cm}} \\
+Modelo Matem\'atico (20\%): &  \underline{\hspace{2cm}}\\
+Conclusiones (15\%): &  \underline{\hspace{2cm}}\\
+Bibliograf\'ia (5\%): & \underline{\hspace{2cm}}\\
+ &  \\
+\textbf{Nota Final (100\%)}:   & \underline{\hspace{2cm}}
+\end{tabular}
+%---------------------------------------------------------------------------%
+\vspace{2cm}
+
+
+\begin{abstract}
+
+El Curriculum-Based Course Timetabling (CB - CTT) consiste en asignar bloques horarios, denominados per\'iodos, a las lecciones de cada curso dentro de una misma malla curricular. Debido a la gran cantidad de posibles asignaciones y restricciones involucradas, encontrar horarios de buena calidad representa un problema de alta complejidad combinatoria. Este informe analiza distintas t\'ecnicas utilizadas para resolver el CB-CTT, comparando sus estrategias, ventajas y limitaciones. Adem\'as, se presenta un modelo y se proponen posibles l\'ineas de trabajo futuro orientadas a mejorar la selecci\'on y aplicaci\'on de m\'etodos de resoluci\'on.
+\end{abstract}
+
+\section{Introducci\'on}
+El problema de planificaci\'on de horarios universitarios, particularmente el Curriculum-Based Course Timetabling (CB - CTT), consiste en asignar bloques horarios denominados per\'iodos a las lecciones de cada curso dentro de una misma malla curricular. Se consideran las restricciones asociadas a profesores, mallas curriculares, disponibilidad y capacidad de las salas. Debido a la gran cantidad de posibles asignaciones y restricciones involucradas, encontrar horarios de buena calidad representa un problema de alta complejidad combinatoria.
+
+El prop\'osito de este informe es analizar distintas t\'ecnicas utilizadas para resolver el CB-CTT, identificando sus principales caracter\'isticas, similitudes, diferencias y limitaciones. Adem\'as, se presenta una formulaci\'on matem\'atica del problema basada en las restricciones definidas en~\cite{DiGaspero2007ITC, Hao2011LowerBounds} para el ITC-2007.
+
+El documento se estructura en tres partes principales. Primero, se presenta la definici\'on del problema y sus restricciones. Luego, se revisan diferentes t\'ecnicas y estrategias de resoluci\'on existentes. Finalmente, se presenta el modelo matem\'atico desarrollado y se discuten las principales conclusiones, limitaciones y posibles l\'ineas de trabajo futuro.
+
+\section{Definici\'on del Problema}
+El problema de planificaci\'on de horarios universitarios, University Course Timetabling (UCT)  abarca la asignaci\'on de horarios para actividades acad\'emicas, considerando las restricciones propias de una instituci\'on universitaria. Una variante de este problema es el Curr\'iculum-Based Course Timetabling (CB-CTT), problema en el que los conflictos entre cursos se determinan a partir de las mallas curriculares, considerando que los cursos pertenecientes a una misma malla comparten estudiantes y, por ende, no deben coincidir~\cite{DiGaspero2007ITC}.
+
+El problema considera un conjunto de mallas curriculares, cada una compuesta por un conjunto de cursos. Dentro de una misma malla curricular, ninguno de sus cursos deber\'a impartirse de manera simult\'anea al estar compartiendo estudiantes~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}. La planificaci\'on usa un horario semanal, dividido en una cantidad fija de d\'ias disponibles para asignar. Cada d\'ia se divide en una cantidad definida de bloques o per\'iodos en los que se puede asignar una lecture de un curso~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}. Se contempla para cada curso diferentes lectures o lecciones semanales, es decir, una cantidad de clases semanales que deben ser separadas en un m\'inimo de d\'ias diferentes dentro de una misma semana~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}. Adem\'as, cada curso ser\'a impartido por un profesor en una sala, donde cada profesor podr\'ia tener disponibilidad limitada para dar clases generando periodos en los que un curso no puede ser impartido, as\'i como tambi\'en  cada sala tiene un aforo m\'aximo, reflejado en la cantidad de asientos disponibles~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}.
+
+Es importante mencionar que~\cite{Bonutti2012Benchmarking} propone considerar otros factores, como las distancias entre las salas para minimizar el traslado entre bloques consecutivos, o el equipamiento disponible en cada sala, que podr\'ia o no ser apropiado para un curso, entre otras restricciones que no se consideran en el presente modelo.
+
+El CB-CTT presenta una elevada complejidad combinatoria, debido a la gran cantidad de posibles asignaciones de cursos, per\'iodos y salas que deben ser evaluadas para construir un horario factible. Adem\'as, estas asignaciones deben satisfacer simult\'aneamente m\'ultiples restricciones relacionadas con la disponibilidad de los profesores, los conflictos entre cursos, la capacidad de las salas y la distribuci\'on de las clases durante la semana. Esta combinaci\'on de decisiones y restricciones hace que la b\'usqueda de una soluci\'on de buena calidad resulte computacionalmente exigente.
+
+Las restricciones del CB-CTT se clasifican en dos categor\'ias: Hard Constraints, que deben cumplirse para que una soluci\'on sea factible, y Soft Constraints, cuyo incumplimiento genera penalizaciones que determinan la calidad de una soluci\'on. Esta clasificaci\'on corresponde a la formulaci\'on utilizada en el ITC-2007~\cite{DiGaspero2007ITC} y posteriormente identificada como UD2 por ~\cite{Bonutti2012Benchmarking}. Esta formulaci\'on ha sido utilizada en trabajos posteriores sobre el problema~\cite{Hao2011LowerBounds} y reconocida como una de las formulaciones est\'andar para el CB-CTT~\cite{Ceschia2023Educational}.
+
+Las Hard Constraints guardan relaci\'on con las posibilidades f\'isicas y la obligatoriedad de la asignaci\'on de un horario para todas las lecciones de todos los cursos en un bloque v\'alido. En particular, estas son:
+
+\begin{enumerate}
+    \item (H1) Lectures. Todas las lecciones de un mismo curso deben ser asignadas a per\'iodos distintos entre s\'i~\cite{Hao2011LowerBounds,DiGaspero2007ITC}.
+    \item (H2) Room Occupancy. No se pueden asignar dos lecciones a una misma sala durante un mismo per\'iodo~\cite{Hao2011LowerBounds,DiGaspero2007ITC}.
+    \item (H3) Conflict. Las lecciones correspondientes a cursos pertenecientes a la misma malla curricular, o impartidas por un mismo profesor, deben ser asignadas a per\'iodos distintos~\cite{Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    \item (H4) Availability. Si un curso tiene un per\'iodo marcado como no disponible, ninguna de sus lecciones puede ser asignada a dicho per\'iodo~\cite{Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+\end{enumerate}
+
+Por su parte, las Soft Constraints abarcan aquellas cosas preferibles dentro de una asignaci\'on, pero que podr\'ian obviarse en caso de no haber otra opci\'on. En particular estas restricciones y sus penalizaciones correspondientes son:
+
+\begin{enumerate}
+    \item (S1) Room Capacity. Para cada lecci\'on, si el n\'umero de estudiantes del curso supera la capacidad de la sala asignada, se aplica una penalizaci\'on de 1 punto por cada estudiante que exceda dicha capacidad~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}.
+    
+    \item (S2) Minimum Working Days. Las lecciones de un curso deben distribuirse en, al menos, el n\'umero m\'inimo de d\'ias distintos establecido. Por cada d\'ia que se encuentre por debajo de dicho m\'inimo, se aplica una penalizaci\'on de 5 puntos~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,DiGaspero2007ITC}.
+    
+    \item (S3) Curriculum Compactness. Las lecciones de los cursos pertenecientes a una misma malla curricular deber\'ian quedar asignadas a per\'iodos consecutivos dentro de un mismo d\'ia. Cada lecci\'on que quede aislada genera una penalizaci\'on de 2 puntos. Se considera aislada una lecci\'on que no tiene ninguna otra lecci\'on de la misma malla curricular inmediatamente antes o despu\'es del per\'iodo en que fue asignada, dentro del mismo d\'ia~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    
+    \item (S4) Room Stability. Las lecciones de un curso deber\'ian ser asignadas a una misma sala. Por cada sala distinta utilizada por un curso, adem\'as de la primera, se aplica una penalizaci\'on de 1 punto, independientemente de cu\'antas veces se utilice dicha sala adicional~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+\end{enumerate}
+
+El objetivo de este CB-CTT es obtener un horario factible que cumpla todas las Hard Constraints y, entre las soluciones factibles, minimizar las penalizaciones asociadas al incumplimiento de las Soft Constraints.
+
+\section{Estado del Arte}
+
+El Curriculum-Based Course Timetabling (CB-CTT) forma parte de la familia de problemas de planificaci\'on de horarios universitarios y ha sido estudiado como un problema de optimizaci\'on combinatoria. La necesidad de comparar m\'etodos de resoluci\'on llev\'o a la realizaci\'on de competencias internacionales de timetabling, como ITC-2007, que incorpora el CB-CTT como uno de sus tracks y utilizando instancias reales de la Universidad de Udine~\cite{Ceschia2023Educational,DiGaspero2007ITC}.
+
+ITC-2007 estableci\'o una formulaci\'on estandarizada del problema, junto con un conjunto de instancias y criterios de evaluaci\'on que permitieron comparar los distintos algoritmos bajo condiciones equivalentes. El objetivo era obtener horarios factibles y minimizar las penalizaciones asociadas a las soft constraints~\cite{DiGaspero2007ITC}. Posteriormente,~\cite{Bonutti2012Benchmarking} ampli\'o esta infraestructura mediante diferentes formulaciones del CB-CTT, formatos de datos, validadores, instancias y lower bounds, buscando representar distintas caracter\'isticas de problemas reales y facilitar la comparaci\'on de m\'etodos~\cite{Bonutti2012Benchmarking}.
+
+Los m\'etodos desarrollados a partir del ITC-2007 incluyen diferentes enfoques heur\'isticos, metaheur\'isticos y exactos. Entre los m\'etodos destacados en la competencia se encuentran Tabu Search, Threshold Accepting, heur\'isticas de reparaci\'on, un enfoque h\'ibrido y un solver basado en CSP~\cite{Ceschia2023Educational}.
+
+Los m\'etodos heur\'isticos permiten obtener soluciones de buena calidad, pero no garantizan su cercan\'ia al \'optimo. Por ello, tambi\'en se han desarrollado m\'etodos exactos para obtener cotas inferiores, incluyendo programaci\'on entera y branch-and-cut. En~\cite{Hao2011LowerBounds} se combinan estas t\'ecnicas con Iterated Tabu Search mediante una estrategia divide and conquer, mejorando las lower bounds de 12 de las 21 instancias y demostrando optimalidad en 6 de ellas.
+
+Tambi\'en se han desarrollado m\'etodos h\'ibridos de b\'usqueda local, como Hybrid Local Search (HLS), que combina distintas estrategias de b\'usqueda. Posteriormente,~\cite{Feutrier2023Landscape} generaliza Iterated Sequential Local Search (ISLS), un framework configurable que permite combinar diferentes m\'etodos de b\'usqueda local
+
+Finalmente,~\cite{Cosar2022Greedy} explora heur\'isticas constructivas greedy, evaluando 120 combinaciones de criterios de ordenamiento de cursos y selecci\'on de salas sobre las 21 instancias de ITC-2007, mostrando que estrategias constructivas simples tambi\'en pueden obtener soluciones competitivas en problemas complejos.
+
+Los resultados obtenidos mediante un benchmark com\'un plantean otra cuesti\'on: un algoritmo que funciona bien en determinadas instancias no necesariamente presenta el mismo desempe\~no en otras. \cite{DeCoster2022AlgorithmSelection} aborda este problema mediante algorithm selection e instance space analysis, estudiando la relaci\'on entre las caracter\'isticas de las instancias y el desempe\~no de distintos algoritmos. La investigaci\'on reciente se orienta as\'i no solo a desarrollar nuevos m\'etodos de resoluci\'on, sino tambi\'en a determinar qu\'e estrategia resulta adecuada para cada tipo de instancia y c\'omo adaptar autom\'aticamente sus componentes~\cite{Feutrier2023Landscape,DeCoster2022AlgorithmSelection}.
+
+Para ello, las instancias son caracterizadas mediante propiedades relacionadas con cursos, lectures, per\'iodos, salas, profesores, mallas y conflictos, entre otras. Esto permite estudiar regiones del espacio de instancias en las que distintos algoritmos presentan comportamientos diferentes~\cite{DeCoster2022AlgorithmSelection}.
+
+Los trabajos m\'as recientes avanzan hacia la adaptaci\'on autom\'atica de los m\'etodos de resoluci\'on. \cite{Feutrier2023Landscape} utiliza ISLS como un framework parametrizable y aplica Automatic Algorithm Configuration para buscar configuraciones adecuadas para el CB-CTT. Mediante irace, se exploran distintas configuraciones y se comparan con HLS como referencia~\cite{Feutrier2023Landscape}.
+
+
+
+\section{Modelo Matem\'atico}
+A continuaci\'on se presenta el desarrollo de un modelo matem\'atico para el problema presentado, basado en las restricciones definidas en~\cite{DiGaspero2007ITC} y las variables definidas en~\cite{Hao2011LowerBounds}. El modelo establece los par\'ametros, variables y funci\'on objetivo, para posteriormente definir las Hard Constraints y las restricciones de enlace necesarias para representar las penalizaciones asociadas a las restricciones soft.
+
+\subsection{Par\'ametros}
+\begin{itemize}
+    \item $D$: Conjunto de d\'ias.
+    \item $P$: Conjunto ordenado de per\'iodos totales (Timeslots) dentro de un d\'ia.
+    \item $C$: Conjunto de cursos.
+    \item $R$: Conjunto de salas.
+    \item $Q$: Conjunto de mallas curriculares .
+    \item $lectures(c)$: Cantidad de clases semanales que obligatoriamente requiere el curso $c$ .
+    \item $teacher(c)$: Par\'ametro que indica qu\'e profesor dicta el curso $c$.
+    \item $students(c)$: Cantidad m\'axima de estudiantes para el curso $c$.
+    \item $minDays(c)$: Cantidad m\'inima de d\'ias diferentes en los que se deben repartir las clases del curso $c$ .
+    \item $capacity(r)$: Capacidad m\'axima de la sala $r$.
+    \item $U(c)$: Contiene los per\'iodos del conjunto $P$ en los cuales el curso $c$ no puede agendarse.
+    \item $T$: Conjunto de profesores.
+
+\end{itemize}
+\subsection{Variables}
+
+\begin{itemize}
+    \item $x_{c,d,p} \in \{0,1\}$: indica si el curso $c$ tiene una clase programada en el d\'ia $d$, per\'iodo $p$.
+    \item $y_{c,d,p,r} \in \{0,1\}$: indica si el curso $c$, en el d\'ia $d$, per\'iodo $p$, utiliza la sala $r$.
+    \item $z_{c,d} \in \{0,1\}$: indica si el curso $c$ tiene alguna clase durante el d\'ia $d$.
+    \item $w_c \in \mathbb{Z}_{\geq 0}$: representa la cantidad de d\'ias que faltan para alcanzar $minDays(c)$.
+    \item $h_{q,d,p} \in \{0,1\}$: indica si alguna clase de la malla curricular $q$ est\'a programada en el d\'ia $d$, per\'iodo $p$.
+    \item $v_{q,d,p} \in \{0,1\}$: indica si existe una clase aislada de la malla curricular $q$ en el d\'ia $d$, per\'iodo $p$.
+    \item $a_{c,r} \in \{0,1\}$: indica si el curso $c$ utiliza la sala $r$ durante la semana.
+\end{itemize}
+
+
+
+\subsection{Funci\'on objetivo}
+Se definen las siguientes:
+
+\begin{itemize}
+    \item Room Capacity (S1): Para cada lecci\'on, si el n\'umero de estudiantes del curso supera la capacidad de la sala asignada, se aplica una penalizaci\'on de 1 punto por cada estudiante que exceda dicha capacidad~\cite{Bonutti2012Benchmarking,DiGaspero2007ITC}.
+    
+    \[
+    S1 = \sum_{c \in C} \sum_{d \in D} \sum_{p \in P} \sum_{r \in R}
+    \max(0, students(c) - capacity(r)) \cdot y_{c,d,p,r}
+    \]
+    
+    \item Minimum Working Days (S2): Las lecciones de un curso deben distribuirse en, al menos, el n\'umero m\'inimo de d\'ias distintos establecido. Por cada d\'ia que se encuentre por debajo de dicho m\'inimo, se aplica una penalizaci\'on de 5 puntos~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,DiGaspero2007ITC}.
+    
+    \[
+    S2 = \sum_{c \in C} w_c
+    \]
+    
+    \item Curriculum Compactness (S3): Las lecciones de los cursos pertenecientes a una misma malla curricular deber\'ian quedar asignadas a per\'iodos consecutivos dentro de un mismo d\'ia. Cada lecci\'on que quede aislada genera una penalizaci\'on de 2 puntos. Se considera aislada una lecci\'on que no tiene ninguna otra lecci\'on de la misma malla curricular inmediatamente antes o despu\'es del per\'iodo en que fue asignada, dentro del mismo d\'ia~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    
+    \[
+    S3 = \sum_{q \in Q} \sum_{d \in D} \sum_{p \in P} v_{q,d,p}
+    \]
+    
+    \item Room Stability (S4): Las lecciones de un curso deber\'ian ser asignadas a una misma sala. Por cada sala distinta utilizada por un curso, adem\'as de la primera, se aplica una penalizaci\'on de 1 punto, independientemente de cu\'antas veces se utilice dicha sala adicional~\cite{Bonutti2012Benchmarking,Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    
+    \[
+    S4 = \sum_{c \in C} \left(\sum_{r \in R} a_{c,r} - 1\right)
+    \]
+\end{itemize}
+
+Luego, la funci\'on objetivo FO es:
+
+\[
+\min Z = 1 \cdot S1 + 5 \cdot S2 + 2 \cdot S3 + 1 \cdot S4
+\]
+
+Esta busca minimizar las penalizaciones obtenidas por cada Soft Constraint (S1 - S4) de manera ponderada. 
+\subsection{Restricciones}
+\subsubsection{Hard Constraints}
+\begin{itemize}
+    \item Lectures (H1): Todas las lecciones de un mismo curso deben ser asignadas a per\'iodos distintos entre s\'i~\cite{Hao2011LowerBounds,DiGaspero2007ITC}.
+    \[ \sum_{d \in D} \sum_{p \in P} x_{c,d,p} = lectures(c), \quad \forall c \in C \]
+
+    \item Room Occupancy (H2): No se pueden asignar dos lecciones a una misma sala durante un mismo per\'iodo~\cite{Hao2011LowerBounds,DiGaspero2007ITC}.
+    \[ \sum_{c \in C} y_{c,d,p,r} \leq 1, \quad \forall d \in D, \forall p \in P, \forall r \in R \]
+
+    \item Conflict (H3): Las lecciones correspondientes a cursos pertenecientes a la misma malla curricular, o impartidas por un mismo profesor, deben ser asignadas a per\'iodos distintos~\cite{Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    \[ \sum_{c \in C: teacher(c)=t} x_{c,d,p} \leq 1, \quad \forall d \in D, \forall p \in P, \forall t \in T \qquad \text{(mismo profesor)} \]
+    \[ \sum_{c \in C: c \in q} x_{c,d,p} \leq 1, \quad \forall d \in D, \forall p \in P, \forall q \in Q \qquad \text{(misma malla)} \]
+
+    \item Availability (H4): Si un curso tiene un per\'iodo marcado como no disponible, ninguna de sus lecciones puede ser asignada a dicho per\'iodo~\cite{Hao2011LowerBounds,Ceschia2023Educational,DiGaspero2007ITC}.
+    \[x_{c,d,p} = 0, \quad \forall c \in C, \forall (d,p) \in U(c)\]
+\end{itemize}
+
+\subsubsection{Enlace de variables}
+\begin{itemize}
+
+    \item Asignaci\'on de sala (x - y):
+    \[
+    x_{c,d,p} = \sum_{r \in R} y_{c,d,p,r}, \quad \forall c \in C, \forall d \in D, \forall p \in P
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Indica que un curso tiene clases en un per\'iodo si est\'a programado en alguna sala.)}
+    \end{minipage}
+    \end{center}
+
+    \item D\'ias de un curso (x - z):
+    \[
+    z_{c,d} \geq x_{c,d,p}, \quad \forall c \in C, \forall d \in D, \forall p \in P
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Indica que un curso tiene clases en un d\'ia si est\'a programado en alguno de sus per\'iodos.)}
+    \end{minipage}
+    \end{center}
+
+    \[
+    z_{c,d} \leq \sum_{p \in P} x_{c,d,p}, \quad \forall c \in C, \forall d \in D
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Impide marcar un d\'ia como utilizado por un curso si este no tiene ninguna clase ese d\'ia.)}
+    \end{minipage}
+    \end{center}
+
+    \item D\'ias m\'inimos (z - w):
+    \[
+    w_c \geq minDays(c) - \sum_{d \in D} z_{c,d}, \quad \forall c \in C
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Determina la cantidad de d\'ias que le faltan a un curso para alcanzar su m\'inimo de d\'ias.)}
+    \end{minipage}
+    \end{center}
+
+    \item Per\'iodos por malla (x - h):
+    \[
+    h_{q,d,p} \geq x_{c,d,p}, \quad \forall q \in Q, \forall c \in q, \forall d \in D, \forall p \in P
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Indica que una malla curricular utiliza un per\'iodo si alguno de sus cursos tiene clase en \'el.)}
+    \end{minipage}
+    \end{center}
+
+    \[
+    h_{q,d,p} \leq \sum_{c \in q} x_{c,d,p}, \quad \forall q \in Q, \forall d \in D, \forall p \in P
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Impide marcar un per\'iodo como utilizado por una malla si ninguno de sus cursos tiene clase en \'el.)}
+    \end{minipage}
+    \end{center}
+
+    \item Clases aisladas (h - v):
+        \[
+        v_{q,d,p} \geq h_{q,d,p} - h_{q,d,p-1} - h_{q,d,p+1},
+        \quad \forall q \in Q, \forall d \in D, \forall p \in P
+        \]
+        \begin{center}
+        \begin{minipage}{0.7\textwidth}
+        \centering
+        \textit{Determina si una clase est\'a aislada de las dem\'as clases de su malla.}
+        \end{minipage}
+        \end{center}
+        \[
+        h_{q,d,0} = 0,
+        \quad \forall q \in Q, \forall d \in D
+        \]
+
+        \[
+        h_{q,d,|P|+1} = 0,
+        \quad \forall q \in Q, \forall d \in D
+        \]
+
+        \begin{center}
+        \begin{minipage}{0.7\textwidth}
+        \centering
+        \textit{Las condiciones de frontera establecen que no existen clases de la misma malla fuera del primer y \'ultimo per\'iodo del d\'ia, fijando dichos valores
+        fuera del dominio de $P$ en cero.}
+        \end{minipage}
+        \end{center}
+
+    \item Conteo de salas por curso (y - a):
+    \[
+    a_{c,r} \geq y_{c,d,p,r}, \quad \forall c \in C, \forall r \in R, \forall d \in D, \forall p \in P
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Indica que un curso utiliza una sala si tiene alguna clase asignada a ella durante la semana.)}
+    \end{minipage}
+    \end{center}
+
+    \[
+    a_{c,r} \leq \sum_{d \in D} \sum_{p \in P} y_{c,d,p,r}, \quad \forall c \in C, \forall r \in R
+    \]
+    \begin{center}
+    \begin{minipage}{0.7\textwidth}
+    \centering
+    \textit{(Impide marcar una sala como utilizada por un curso si este no tiene ninguna clase asignada a ella.)}
+    \end{minipage}
+    \end{center}
+
+\end{itemize}
+
+\subsubsection{Dominios}
+\[
+x_{c,d,p} \in \{0,1\}, \quad \forall c \in C, \forall d \in D, \forall p \in P
+\]
+
+\[
+y_{c,d,p,r} \in \{0,1\}, \quad \forall c \in C, \forall d \in D, \forall p \in P, \forall r \in R
+\]
+
+\[
+z_{c,d} \in \{0,1\}, \quad \forall c \in C, \forall d \in D
+\]
+
+\[
+h_{q,d,p} \in \{0,1\}, \quad \forall q \in Q, \forall d \in D, \forall p \in P
+\]
+
+\[
+v_{q,d,p} \in \{0,1\}, \quad \forall q \in Q, \forall d \in D, \forall p \in P
+\]
+
+\[
+a_{c,r} \in \{0,1\}, \quad \forall c \in C, \forall r \in R
+\]
+
+\[
+w_c \in \mathbb{Z}_{\geq 0}, \quad \forall c \in C
+\]
+
+\section{Conclusiones}
+En el presente estudio se analizaron diversas t\'ecnicas que abordan el mismo problema de CB-CTT general, utilizando diferentes perspectivas, tanto en la formulaci\'on como en estrategias de resoluci\'on. Mientras los m\'etodos exactos buscan obtener resultados \'optimos, los enfoques heur\'isticos y metaheur\'isticos se enfocan en llegar a soluciones sub\'optimas en tiempos razonables. Adem\'as, existen enfoques h\'ibridos y estrategias de selecci\'on de algoritmos que aprovechan ventajas de diferentes m\'etodos seg\'un la instancia.
+
+Todas las t\'ecnicas buscan satisfacer las Hard constrictions y minimizar las penalizaciones de las Soft constrictions. La diferencia importante se encuentra en la estrategia de b\'usqueda, nuevamente haciendo la distinci\'on entre m\'etodos exactos que buscan optimalidad, frente a heur\'isticos y metaheur\'isticos que priorizan una soluci\'on de buena calidad en un tiempo razonable.
+
+Los m\'etodos exactos presentan dificultades frente a instancias grandes, mientras que los heur\'isticos no garantizan un resultado \'optimo, y el desempe\~no depende de la instancia. Un trabajo futuro interesante ser\'ia la integraci\'on de herramientas generativas de inteligencia artificial, para la selecci\'on de m\'etodos seg\'un instancia, o para filtrar y evaluar resultados obtenidos por estrategias basadas en heur\'isticas.
+
+\section{Uso LLMs}
+\begin{enumerate}
+\item Herramienta utilizada: ChatGPT modelo GPT-5.6 Luna plan Go
+\item Prop\'osito de uso: Revisar redacci\'on, explicar modelos, traspasar a LaTex
+\item Prompts relevantes: "Revisa la redacci\'on en este parrafo, para que se encuentre en tercera persona". "Traspasa estas variables a LaTex". 
+\item Nivel de edici\'on: Las correcciones propuestas a lo escrito originalmente se revisaron y algunas fueron aplicadas y otras no seg\'un diversos criterios. Los traspasos a LaTex fueron princpalmente copiados y pegados, pues correspond\'ian directamente a lo previamente escrito a mano en el texto original. 
+\item Validaci\'on: Juicio propio, Papers utilizados en la bibliograf\'ia.
+\end{enumerate}
+
+
+%------Remover hasta acá ----------%
+\bibliographystyle{plain}
+\bibliography{Referencias}
+
+\end{document} 

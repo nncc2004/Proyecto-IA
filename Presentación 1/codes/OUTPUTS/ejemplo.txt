@@ -22,3 +22,4 @@ Curso 3:
   Dia: 2 | Periodo: 0 | Sala: A
   Dia: 2 | Periodo: 1 | Sala: A
 
+f_eval(S) = 107

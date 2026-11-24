@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=latex 2026.9.29)  23 NOV 2026 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=latex 2026.9.29)  24 NOV 2026 01:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -242,10 +242,10 @@ LaTeX Warning: Unused global option(s):
     [letter].
 
 (./PlantillaEntrega2.aux
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 10.
+(babel)             Reported on input line 8.
 
 
 LaTeX Warning: Label `fig:mi_imagen' multiply defined.
@@ -320,7 +320,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-Overfull \hbox (1.0428pt too wide) in paragraph at lines 51--52
+Overfull \hbox (1.0428pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/10 El pro-ble-ma de pla-ni-fi-ca-ci^^Son de ho-ra-rios uni-ver-s
 i-ta-rios, Uni-ver-sity Cour-se Ti-me-ta-bling (UCT)
  []
@@ -334,8 +334,8 @@ File: calidad.eps Graphic file (type eps)
 File: tiempo_promedio.eps Graphic file (type eps)
  <tiempo_promedio.eps> [13] [14] (./PlantillaEntrega2.bbl [15])
 [16] (./PlantillaEntrega2.aux
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -349,10 +349,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4024 strings out of 467534
  64369 string characters out of 5422164
- 499622 words of memory out of 5000000
+ 500622 words of memory out of 5000000
  32898 multiletter control sequences out of 15000+600000
  636705 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,9n,65p,1230b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PlantillaEntrega2.dvi (16 pages, 69360 bytes).
+Output written on PlantillaEntrega2.dvi (16 pages, 70464 bytes).

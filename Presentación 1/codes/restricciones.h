@@ -19,4 +19,9 @@ bool validarH4(const Instancia& instancia, const Solucion& solucion);
 //Validacion de todas
 bool validarTodas(const Instancia& instancia, const Solucion& solucion);
 
+
+// Validación local de una nueva asignación
+bool validarAsignacion(const Instancia& instancia, const Solucion& solucion, int indiceCurso,const Asignacion& nueva);
+
+
 #endif

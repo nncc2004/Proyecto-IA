@@ -1,0 +1,4 @@
+MAX_ITERACIONES_POR_HC,f_eval_promedio,f_eval_mediana,f_eval_minimo,f_eval_maximo,tiempo_promedio,tiempo_mediano,tiempo_minimo,tiempo_maximo
+10,559.29,529.0,103,1413,173.25,111.2,3.88,489.86
+100,262.71,245.0,10,773,709.97,755.35,9.96,1123.31
+1000,239.12,219.0,10,764,856.37,980.54,10.25,1483.02

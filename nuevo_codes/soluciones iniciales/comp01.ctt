@@ -1,0 +1,225 @@
+Curso 0:
+  Dia: 0 | Periodo: 2 | Sala: B
+  Dia: 3 | Periodo: 5 | Sala: B
+  Dia: 1 | Periodo: 5 | Sala: B
+  Dia: 2 | Periodo: 2 | Sala: B
+  Dia: 3 | Periodo: 4 | Sala: B
+  Dia: 0 | Periodo: 0 | Sala: B
+
+Curso 1:
+  Dia: 1 | Periodo: 1 | Sala: B
+  Dia: 4 | Periodo: 3 | Sala: B
+  Dia: 0 | Periodo: 5 | Sala: B
+  Dia: 2 | Periodo: 0 | Sala: B
+  Dia: 3 | Periodo: 1 | Sala: B
+  Dia: 4 | Periodo: 2 | Sala: B
+
+Curso 2:
+  Dia: 4 | Periodo: 1 | Sala: B
+  Dia: 2 | Periodo: 3 | Sala: B
+  Dia: 3 | Periodo: 2 | Sala: B
+  Dia: 1 | Periodo: 0 | Sala: B
+  Dia: 3 | Periodo: 0 | Sala: B
+  Dia: 2 | Periodo: 5 | Sala: B
+  Dia: 4 | Periodo: 4 | Sala: B
+
+Curso 3:
+  Dia: 0 | Periodo: 4 | Sala: B
+  Dia: 4 | Periodo: 0 | Sala: B
+  Dia: 1 | Periodo: 2 | Sala: F
+
+Curso 4:
+  Dia: 0 | Periodo: 0 | Sala: S
+
+Curso 5:
+  Dia: 4 | Periodo: 1 | Sala: C
+  Dia: 2 | Periodo: 3 | Sala: C
+  Dia: 3 | Periodo: 3 | Sala: C
+  Dia: 0 | Periodo: 2 | Sala: C
+  Dia: 1 | Periodo: 5 | Sala: C
+  Dia: 2 | Periodo: 4 | Sala: C
+  Dia: 3 | Periodo: 2 | Sala: C
+  Dia: 4 | Periodo: 4 | Sala: C
+
+Curso 6:
+  Dia: 3 | Periodo: 0 | Sala: C
+  Dia: 4 | Periodo: 5 | Sala: C
+  Dia: 0 | Periodo: 1 | Sala: B
+  Dia: 1 | Periodo: 2 | Sala: B
+  Dia: 2 | Periodo: 1 | Sala: B
+  Dia: 3 | Periodo: 5 | Sala: C
+  Dia: 0 | Periodo: 3 | Sala: B
+
+Curso 7:
+  Dia: 3 | Periodo: 4 | Sala: C
+  Dia: 1 | Periodo: 4 | Sala: B
+
+Curso 8:
+  Dia: 4 | Periodo: 3 | Sala: C
+  Dia: 2 | Periodo: 5 | Sala: C
+  Dia: 1 | Periodo: 4 | Sala: C
+  Dia: 0 | Periodo: 4 | Sala: C
+
+Curso 9:
+  Dia: 0 | Periodo: 3 | Sala: C
+  Dia: 2 | Periodo: 1 | Sala: C
+  Dia: 1 | Periodo: 0 | Sala: C
+  Dia: 4 | Periodo: 0 | Sala: C
+  Dia: 1 | Periodo: 1 | Sala: C
+  Dia: 0 | Periodo: 1 | Sala: C
+  Dia: 4 | Periodo: 2 | Sala: C
+  Dia: 2 | Periodo: 0 | Sala: C
+
+Curso 10:
+  Dia: 4 | Periodo: 5 | Sala: B
+  Dia: 3 | Periodo: 3 | Sala: B
+  Dia: 1 | Periodo: 3 | Sala: B
+  Dia: 2 | Periodo: 4 | Sala: B
+  Dia: 0 | Periodo: 5 | Sala: S
+
+Curso 11:
+  Dia: 4 | Periodo: 0 | Sala: F
+  Dia: 3 | Periodo: 4 | Sala: F
+  Dia: 2 | Periodo: 0 | Sala: S
+  Dia: 1 | Periodo: 1 | Sala: S
+  Dia: 0 | Periodo: 2 | Sala: S
+
+Curso 12:
+  Dia: 4 | Periodo: 2 | Sala: F
+  Dia: 2 | Periodo: 1 | Sala: S
+  Dia: 3 | Periodo: 5 | Sala: S
+  Dia: 0 | Periodo: 1 | Sala: S
+  Dia: 1 | Periodo: 5 | Sala: F
+
+Curso 13:
+  Dia: 4 | Periodo: 1 | Sala: S
+
+Curso 14:
+  Dia: 0 | Periodo: 0 | Sala: C
+  Dia: 1 | Periodo: 3 | Sala: C
+  Dia: 2 | Periodo: 2 | Sala: C
+  Dia: 3 | Periodo: 1 | Sala: C
+  Dia: 0 | Periodo: 5 | Sala: C
+  Dia: 1 | Periodo: 2 | Sala: C
+
+Curso 15:
+  Dia: 1 | Periodo: 2 | Sala: S
+  Dia: 3 | Periodo: 3 | Sala: F
+  Dia: 4 | Periodo: 3 | Sala: S
+  Dia: 2 | Periodo: 5 | Sala: F
+  Dia: 0 | Periodo: 0 | Sala: F
+
+Curso 16:
+  Dia: 1 | Periodo: 3 | Sala: F
+  Dia: 4 | Periodo: 0 | Sala: S
+  Dia: 0 | Periodo: 4 | Sala: S
+  Dia: 3 | Periodo: 2 | Sala: S
+  Dia: 2 | Periodo: 3 | Sala: S
+
+Curso 17:
+  Dia: 1 | Periodo: 3 | Sala: E
+  Dia: 4 | Periodo: 0 | Sala: E
+  Dia: 3 | Periodo: 4 | Sala: E
+  Dia: 0 | Periodo: 1 | Sala: E
+  Dia: 2 | Periodo: 2 | Sala: E
+  Dia: 0 | Periodo: 5 | Sala: E
+
+Curso 18:
+  Dia: 1 | Periodo: 4 | Sala: E
+  Dia: 0 | Periodo: 2 | Sala: E
+  Dia: 4 | Periodo: 4 | Sala: E
+  Dia: 2 | Periodo: 0 | Sala: E
+  Dia: 3 | Periodo: 0 | Sala: E
+  Dia: 1 | Periodo: 2 | Sala: E
+
+Curso 19:
+  Dia: 2 | Periodo: 2 | Sala: S
+  Dia: 4 | Periodo: 1 | Sala: F
+  Dia: 3 | Periodo: 1 | Sala: F
+  Dia: 0 | Periodo: 5 | Sala: F
+  Dia: 1 | Periodo: 0 | Sala: F
+
+Curso 20:
+  Dia: 0 | Periodo: 0 | Sala: E
+  Dia: 2 | Periodo: 1 | Sala: E
+  Dia: 3 | Periodo: 5 | Sala: E
+  Dia: 4 | Periodo: 2 | Sala: E
+  Dia: 1 | Periodo: 1 | Sala: E
+  Dia: 2 | Periodo: 5 | Sala: E
+
+Curso 21:
+  Dia: 3 | Periodo: 1 | Sala: E
+  Dia: 0 | Periodo: 3 | Sala: E
+  Dia: 4 | Periodo: 1 | Sala: E
+  Dia: 2 | Periodo: 3 | Sala: E
+  Dia: 1 | Periodo: 0 | Sala: E
+  Dia: 3 | Periodo: 2 | Sala: E
+
+Curso 22:
+  Dia: 2 | Periodo: 4 | Sala: E
+  Dia: 3 | Periodo: 3 | Sala: E
+  Dia: 4 | Periodo: 3 | Sala: E
+  Dia: 0 | Periodo: 4 | Sala: E
+  Dia: 1 | Periodo: 5 | Sala: E
+  Dia: 4 | Periodo: 5 | Sala: E
+
+Curso 23:
+  Dia: 4 | Periodo: 0 | Sala: G
+  Dia: 3 | Periodo: 4 | Sala: G
+  Dia: 0 | Periodo: 1 | Sala: G
+  Dia: 1 | Periodo: 3 | Sala: G
+  Dia: 2 | Periodo: 0 | Sala: G
+  Dia: 0 | Periodo: 2 | Sala: G
+
+Curso 24:
+  Dia: 1 | Periodo: 4 | Sala: S
+  Dia: 2 | Periodo: 4 | Sala: S
+  Dia: 4 | Periodo: 4 | Sala: F
+  Dia: 3 | Periodo: 4 | Sala: S
+  Dia: 0 | Periodo: 1 | Sala: F
+
+Curso 25:
+  Dia: 0 | Periodo: 5 | Sala: G
+  Dia: 1 | Periodo: 0 | Sala: G
+  Dia: 4 | Periodo: 1 | Sala: G
+  Dia: 3 | Periodo: 1 | Sala: G
+  Dia: 2 | Periodo: 2 | Sala: G
+  Dia: 3 | Periodo: 0 | Sala: G
+
+Curso 26:
+  Dia: 0 | Periodo: 3 | Sala: G
+  Dia: 4 | Periodo: 2 | Sala: G
+  Dia: 2 | Periodo: 1 | Sala: G
+  Dia: 1 | Periodo: 1 | Sala: G
+  Dia: 3 | Periodo: 5 | Sala: G
+  Dia: 0 | Periodo: 0 | Sala: G
+
+Curso 27:
+  Dia: 1 | Periodo: 2 | Sala: G
+  Dia: 4 | Periodo: 3 | Sala: G
+  Dia: 2 | Periodo: 4 | Sala: F
+  Dia: 3 | Periodo: 3 | Sala: S
+  Dia: 0 | Periodo: 4 | Sala: F
+  Dia: 4 | Periodo: 5 | Sala: S
+
+Curso 28:
+  Dia: 0 | Periodo: 4 | Sala: G
+  Dia: 1 | Periodo: 4 | Sala: G
+  Dia: 3 | Periodo: 3 | Sala: G
+  Dia: 2 | Periodo: 4 | Sala: G
+  Dia: 4 | Periodo: 5 | Sala: G
+  Dia: 1 | Periodo: 5 | Sala: G
+
+Curso 29:
+  Dia: 2 | Periodo: 5 | Sala: G
+  Dia: 3 | Periodo: 2 | Sala: G
+  Dia: 1 | Periodo: 4 | Sala: F
+  Dia: 4 | Periodo: 4 | Sala: G
+  Dia: 0 | Periodo: 3 | Sala: F
+  Dia: 2 | Periodo: 3 | Sala: G
+
+H1: 1
+H2: 1
+H3: 1
+H4: 1
+f_eval(S) = 245

@@ -1,8 +1,10 @@
 #include "greedy.h"
 #include "restricciones.h"
-
+#include <iostream>
 #include <vector>
 #include <algorithm>
+
+int contador_general = 1;
 
 Solucion inicializarSolucion(const Instancia& instancia) {
 
@@ -11,7 +13,6 @@ Solucion inicializarSolucion(const Instancia& instancia) {
 
     return solucion;
 }
-
 
 
 vector<int> ordenarCursos(const Instancia& instancia) {
@@ -61,7 +62,7 @@ vector<int> ordenarCursos(const Instancia& instancia) {
 
 bool buscarAsignacion(const Instancia& instancia,  Solucion& solucion, int indiceCurso) {
     // Busca una asignacion dia/priodo/sala para una lecture de un curso
-
+    int intentos = 0;
     //Dias
     for (int dia = 0; dia < instancia.days; ++dia) {
 
@@ -70,15 +71,17 @@ bool buscarAsignacion(const Instancia& instancia,  Solucion& solucion, int indic
 
             // salas
             for (const auto& sala : instancia.salas) {
-
+                intentos++;
+                cout <<"["<< contador_general <<":BUSCAR] Intento " << intentos
+                    << " | Dia " << dia
+                    << " | Periodo " << periodo
+                    << " | Sala " << sala.id << endl;
+                contador_general++;
                 Asignacion nueva = {dia, periodo, sala.id};
-                solucion.cursos[indiceCurso].push_back(nueva);
-
-                // Compurueba todas las restricciones
-                if (validarTodas(instancia, solucion))  return true;
-
-                // SI no es factivle, la elimina y prueba la isguiente
-                solucion.cursos[indiceCurso].pop_back();
+                if (validarAsignacion(instancia, solucion, indiceCurso, nueva)) {
+                    solucion.cursos[indiceCurso].push_back(nueva);
+                    return true;
+                }
             }
         }
     }
@@ -90,7 +93,8 @@ bool asignarCurso(const Instancia& instancia, Solucion& solucion, int indiceCurs
 
     // Asignar todas las lectures del curso
     for (int i = 0; i < instancia.cursos[indiceCurso].lectures; ++i) {
-
+        cout << "[ASIGNAR] Curso " << instancia.cursos[indiceCurso].id
+         << " | Lecture " << i << endl;
         if (!buscarAsignacion(instancia, solucion, indiceCurso)) {
             return false;
         }
@@ -106,7 +110,7 @@ Solucion greedy(const Instancia& instancia) {
     vector<int> orden = ordenarCursos(instancia);
 
     for (size_t  intento = 0; intento < orden.size(); ++intento) {
-
+        cout << "[GREEDY] Intento " << intento << endl;
         Solucion solucion = inicializarSolucion(instancia);
 
         bool factible = true;
@@ -115,7 +119,8 @@ Solucion greedy(const Instancia& instancia) {
         for (size_t  i = 0; i < orden.size(); ++i) {
 
             int indiceCurso = orden[(intento + i) % orden.size()];
-
+            cout << "[GREEDY] Curso " << indiceCurso
+             << " (" << instancia.cursos[indiceCurso].id << ")" << endl;
             // asignar las lectures del curso
             if (!asignarCurso(instancia, solucion, indiceCurso)) {
                 factible = false;

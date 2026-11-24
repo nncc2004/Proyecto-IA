@@ -1,0 +1,241 @@
+H1: 1
+H2: 1
+H3: 1
+H4: 1
+f_eval(S) (inicial) = 668
+f_eval(S) = 421
+Duracion en segundos: 37.0528
+MAX_RESTARTS:10
+MAX_ITERACIONES_POR_HC: 10
+Curso 0:
+  Dia: 0 | Periodo: 1 | Sala: rC1
+  Dia: 4 | Periodo: 3 | Sala: rC2
+  Dia: 1 | Periodo: 2 | Sala: rC1
+
+Curso 1:
+  Dia: 3 | Periodo: 1 | Sala: r1
+  Dia: 5 | Periodo: 0 | Sala: r1
+  Dia: 3 | Periodo: 0 | Sala: r1
+
+Curso 2:
+  Dia: 3 | Periodo: 4 | Sala: rM
+  Dia: 2 | Periodo: 3 | Sala: rL
+  Dia: 4 | Periodo: 0 | Sala: rM
+
+Curso 3:
+  Dia: 4 | Periodo: 1 | Sala: r1
+  Dia: 0 | Periodo: 2 | Sala: r10
+  Dia: 2 | Periodo: 2 | Sala: r1
+
+Curso 4:
+  Dia: 1 | Periodo: 1 | Sala: r10
+  Dia: 0 | Periodo: 3 | Sala: r10
+  Dia: 2 | Periodo: 2 | Sala: r10
+
+Curso 5:
+  Dia: 2 | Periodo: 5 | Sala: rC2
+  Dia: 3 | Periodo: 0 | Sala: rVL
+  Dia: 4 | Periodo: 1 | Sala: rC2
+
+Curso 6:
+  Dia: 0 | Periodo: 1 | Sala: rO
+  Dia: 1 | Periodo: 1 | Sala: rO
+  Dia: 5 | Periodo: 1 | Sala: rO
+
+Curso 7:
+  Dia: 5 | Periodo: 1 | Sala: r10
+  Dia: 0 | Periodo: 4 | Sala: r10
+  Dia: 1 | Periodo: 0 | Sala: r10
+
+Curso 8:
+  Dia: 3 | Periodo: 2 | Sala: rN
+  Dia: 3 | Periodo: 5 | Sala: rM
+  Dia: 3 | Periodo: 3 | Sala: rL
+
+Curso 9:
+  Dia: 2 | Periodo: 5 | Sala: rM
+  Dia: 3 | Periodo: 2 | Sala: rM
+  Dia: 4 | Periodo: 1 | Sala: rM
+
+Curso 10:
+  Dia: 4 | Periodo: 2 | Sala: rL
+  Dia: 3 | Periodo: 1 | Sala: rM
+  Dia: 2 | Periodo: 5 | Sala: rL
+
+Curso 11:
+  Dia: 2 | Periodo: 3 | Sala: rN
+  Dia: 3 | Periodo: 0 | Sala: rN
+  Dia: 4 | Periodo: 0 | Sala: rN
+
+Curso 12:
+  Dia: 1 | Periodo: 4 | Sala: rVL
+  Dia: 4 | Periodo: 4 | Sala: rC2
+  Dia: 0 | Periodo: 0 | Sala: rVL
+
+Curso 13:
+  Dia: 2 | Periodo: 1 | Sala: rVL
+  Dia: 1 | Periodo: 0 | Sala: rVL
+  Dia: 0 | Periodo: 4 | Sala: rC2
+
+Curso 14:
+  Dia: 3 | Periodo: 2 | Sala: r10
+  Dia: 4 | Periodo: 1 | Sala: r10
+
+Curso 15:
+  Dia: 3 | Periodo: 3 | Sala: rN
+  Dia: 0 | Periodo: 2 | Sala: rN
+
+Curso 16:
+  Dia: 0 | Periodo: 3 | Sala: rN
+  Dia: 4 | Periodo: 3 | Sala: rN
+  Dia: 1 | Periodo: 0 | Sala: rN
+
+Curso 17:
+  Dia: 1 | Periodo: 1 | Sala: rVL
+  Dia: 2 | Periodo: 2 | Sala: rVL
+  Dia: 0 | Periodo: 3 | Sala: rC1
+
+Curso 18:
+  Dia: 3 | Periodo: 5 | Sala: rN
+  Dia: 1 | Periodo: 2 | Sala: rN
+  Dia: 1 | Periodo: 3 | Sala: rN
+
+Curso 19:
+  Dia: 2 | Periodo: 2 | Sala: rN
+  Dia: 4 | Periodo: 4 | Sala: rN
+  Dia: 5 | Periodo: 1 | Sala: rN
+
+Curso 20:
+  Dia: 4 | Periodo: 2 | Sala: rM
+  Dia: 3 | Periodo: 3 | Sala: rM
+  Dia: 5 | Periodo: 1 | Sala: rM
+
+Curso 21:
+  Dia: 0 | Periodo: 2 | Sala: rM
+  Dia: 1 | Periodo: 2 | Sala: rM
+  Dia: 2 | Periodo: 0 | Sala: rM
+
+Curso 22:
+  Dia: 0 | Periodo: 3 | Sala: rM
+  Dia: 1 | Periodo: 1 | Sala: rM
+  Dia: 2 | Periodo: 1 | Sala: rM
+
+Curso 23:
+  Dia: 3 | Periodo: 4 | Sala: rO
+  Dia: 4 | Periodo: 3 | Sala: rO
+  Dia: 5 | Periodo: 0 | Sala: rO
+
+Curso 24:
+  Dia: 1 | Periodo: 3 | Sala: rO
+  Dia: 0 | Periodo: 3 | Sala: rO
+  Dia: 2 | Periodo: 1 | Sala: rO
+
+Curso 25:
+  Dia: 5 | Periodo: 1 | Sala: rC2
+  Dia: 1 | Periodo: 0 | Sala: rC2
+  Dia: 0 | Periodo: 2 | Sala: rC2
+
+Curso 26:
+  Dia: 2 | Periodo: 4 | Sala: rVL
+  Dia: 1 | Periodo: 4 | Sala: rC2
+  Dia: 3 | Periodo: 2 | Sala: rVL
+
+Curso 27:
+  Dia: 4 | Periodo: 0 | Sala: rC2
+  Dia: 0 | Periodo: 0 | Sala: rC2
+  Dia: 1 | Periodo: 2 | Sala: rC2
+
+Curso 28:
+  Dia: 3 | Periodo: 5 | Sala: rC2
+  Dia: 4 | Periodo: 0 | Sala: rVL
+  Dia: 2 | Periodo: 0 | Sala: rVL
+
+Curso 29:
+  Dia: 3 | Periodo: 1 | Sala: rN
+  Dia: 2 | Periodo: 4 | Sala: rN
+  Dia: 4 | Periodo: 2 | Sala: rN
+
+Curso 30:
+  Dia: 3 | Periodo: 1 | Sala: rC2
+  Dia: 1 | Periodo: 3 | Sala: rVL
+  Dia: 0 | Periodo: 4 | Sala: rVL
+
+Curso 31:
+  Dia: 0 | Periodo: 2 | Sala: rVL
+  Dia: 1 | Periodo: 1 | Sala: rC2
+  Dia: 4 | Periodo: 3 | Sala: rVL
+
+Curso 32:
+  Dia: 2 | Periodo: 5 | Sala: rVL
+  Dia: 3 | Periodo: 0 | Sala: rC2
+  Dia: 4 | Periodo: 1 | Sala: rVL
+
+Curso 33:
+  Dia: 2 | Periodo: 0 | Sala: rC2
+  Dia: 1 | Periodo: 2 | Sala: rVL
+  Dia: 0 | Periodo: 3 | Sala: rVL
+
+Curso 34:
+  Dia: 2 | Periodo: 3 | Sala: rM
+  Dia: 1 | Periodo: 4 | Sala: rM
+  Dia: 5 | Periodo: 0 | Sala: rM
+
+Curso 35:
+  Dia: 1 | Periodo: 2 | Sala: rO
+  Dia: 4 | Periodo: 4 | Sala: rO
+  Dia: 0 | Periodo: 4 | Sala: rO
+
+Curso 36:
+  Dia: 1 | Periodo: 3 | Sala: rM
+  Dia: 0 | Periodo: 3 | Sala: rL
+  Dia: 2 | Periodo: 2 | Sala: rM
+
+Curso 37:
+  Dia: 2 | Periodo: 2 | Sala: rC2
+  Dia: 3 | Periodo: 3 | Sala: rC2
+  Dia: 5 | Periodo: 0 | Sala: rVL
+
+Curso 38:
+  Dia: 2 | Periodo: 3 | Sala: rC2
+  Dia: 3 | Periodo: 4 | Sala: rC2
+  Dia: 4 | Periodo: 2 | Sala: rVL
+
+Curso 39:
+  Dia: 3 | Periodo: 4 | Sala: rN
+  Dia: 2 | Periodo: 0 | Sala: rN
+  Dia: 2 | Periodo: 1 | Sala: r1
+
+Curso 40:
+  Dia: 3 | Periodo: 2 | Sala: rC2
+  Dia: 5 | Periodo: 1 | Sala: rVL
+  Dia: 0 | Periodo: 3 | Sala: rC2
+
+Curso 41:
+  Dia: 1 | Periodo: 1 | Sala: rN
+  Dia: 0 | Periodo: 4 | Sala: rN
+  Dia: 2 | Periodo: 1 | Sala: rN
+
+Curso 42:
+  Dia: 0 | Periodo: 1 | Sala: rM
+  Dia: 4 | Periodo: 3 | Sala: rM
+
+Curso 43:
+  Dia: 4 | Periodo: 4 | Sala: rM
+  Dia: 1 | Periodo: 0 | Sala: rM
+  Dia: 0 | Periodo: 0 | Sala: rM
+
+Curso 44:
+  Dia: 3 | Periodo: 5 | Sala: rVL
+  Dia: 4 | Periodo: 2 | Sala: rC2
+  Dia: 0 | Periodo: 1 | Sala: rVL
+
+Curso 45:
+  Dia: 0 | Periodo: 0 | Sala: rC1
+  Dia: 1 | Periodo: 1 | Sala: rC1
+  Dia: 4 | Periodo: 0 | Sala: rC1
+
+Curso 46:
+  Dia: 0 | Periodo: 1 | Sala: rC2
+  Dia: 2 | Periodo: 4 | Sala: rC2
+  Dia: 1 | Periodo: 3 | Sala: rC2
+

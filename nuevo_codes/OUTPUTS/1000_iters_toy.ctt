@@ -1,0 +1,33 @@
+H1: 1
+H2: 1
+H3: 1
+H4: 1
+f_eval(S) (inicial) = 20
+f_eval(S) = 0
+Duracion en segundos: 0.186617
+MAX_RESTARTS:10
+MAX_ITERACIONES_POR_HC: 1000
+Curso 0:
+  Dia: 3 | Periodo: 2 | Sala: A
+  Dia: 0 | Periodo: 0 | Sala: A
+  Dia: 1 | Periodo: 1 | Sala: A
+
+Curso 1:
+  Dia: 3 | Periodo: 1 | Sala: B
+  Dia: 2 | Periodo: 2 | Sala: B
+  Dia: 1 | Periodo: 0 | Sala: B
+
+Curso 2:
+  Dia: 0 | Periodo: 1 | Sala: B
+  Dia: 1 | Periodo: 2 | Sala: B
+  Dia: 4 | Periodo: 1 | Sala: B
+  Dia: 2 | Periodo: 3 | Sala: B
+  Dia: 4 | Periodo: 0 | Sala: B
+
+Curso 3:
+  Dia: 4 | Periodo: 2 | Sala: A
+  Dia: 1 | Periodo: 3 | Sala: A
+  Dia: 2 | Periodo: 2 | Sala: A
+  Dia: 0 | Periodo: 3 | Sala: A
+  Dia: 0 | Periodo: 2 | Sala: A
+

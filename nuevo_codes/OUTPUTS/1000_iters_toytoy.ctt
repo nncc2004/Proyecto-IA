@@ -1,0 +1,22 @@
+H1: 1
+H2: 1
+H3: 1
+H4: 1
+f_eval(S) (inicial) = 4
+f_eval(S) = 4
+Duracion en segundos: 0.00973036
+MAX_RESTARTS:10
+MAX_ITERACIONES_POR_HC: 1000
+Curso 0:
+  Dia: 2 | Periodo: 0 | Sala: A
+  Dia: 0 | Periodo: 0 | Sala: A
+
+Curso 1:
+  Dia: 0 | Periodo: 1 | Sala: B
+  Dia: 1 | Periodo: 1 | Sala: B
+  Dia: 2 | Periodo: 1 | Sala: B
+
+Curso 2:
+  Dia: 1 | Periodo: 0 | Sala: B
+  Dia: 2 | Periodo: 2 | Sala: B
+

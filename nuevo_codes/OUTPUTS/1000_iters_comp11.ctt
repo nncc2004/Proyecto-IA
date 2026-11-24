@@ -1,0 +1,231 @@
+H1: 1
+H2: 1
+H3: 1
+H4: 1
+f_eval(S) (inicial) = 181
+f_eval(S) = 10
+Duracion en segundos: 94.6043
+MAX_RESTARTS:10
+MAX_ITERACIONES_POR_HC: 1000
+Curso 0:
+  Dia: 2 | Periodo: 5 | Sala: C
+  Dia: 1 | Periodo: 8 | Sala: C
+
+Curso 1:
+  Dia: 4 | Periodo: 8 | Sala: C
+  Dia: 1 | Periodo: 7 | Sala: C
+
+Curso 2:
+  Dia: 0 | Periodo: 1 | Sala: C
+  Dia: 4 | Periodo: 7 | Sala: C
+  Dia: 3 | Periodo: 2 | Sala: C
+  Dia: 2 | Periodo: 2 | Sala: C
+  Dia: 1 | Periodo: 3 | Sala: C
+  Dia: 3 | Periodo: 3 | Sala: C
+  Dia: 4 | Periodo: 5 | Sala: C
+  Dia: 0 | Periodo: 2 | Sala: C
+  Dia: 2 | Periodo: 1 | Sala: C
+
+Curso 3:
+  Dia: 1 | Periodo: 2 | Sala: C
+  Dia: 0 | Periodo: 3 | Sala: C
+  Dia: 4 | Periodo: 4 | Sala: C
+  Dia: 2 | Periodo: 6 | Sala: C
+  Dia: 1 | Periodo: 4 | Sala: C
+  Dia: 1 | Periodo: 1 | Sala: C
+  Dia: 4 | Periodo: 6 | Sala: C
+
+Curso 4:
+  Dia: 4 | Periodo: 3 | Sala: C
+  Dia: 2 | Periodo: 4 | Sala: C
+  Dia: 0 | Periodo: 4 | Sala: C
+
+Curso 5:
+  Dia: 2 | Periodo: 8 | Sala: C
+  Dia: 2 | Periodo: 3 | Sala: C
+  Dia: 1 | Periodo: 5 | Sala: C
+  Dia: 3 | Periodo: 6 | Sala: C
+  Dia: 4 | Periodo: 0 | Sala: C
+  Dia: 0 | Periodo: 5 | Sala: C
+  Dia: 2 | Periodo: 7 | Sala: C
+  Dia: 4 | Periodo: 1 | Sala: C
+  Dia: 3 | Periodo: 7 | Sala: C
+
+Curso 6:
+  Dia: 3 | Periodo: 1 | Sala: C
+  Dia: 3 | Periodo: 0 | Sala: C
+  Dia: 0 | Periodo: 6 | Sala: C
+  Dia: 3 | Periodo: 8 | Sala: C
+  Dia: 0 | Periodo: 7 | Sala: C
+  Dia: 4 | Periodo: 2 | Sala: C
+  Dia: 1 | Periodo: 6 | Sala: C
+  Dia: 3 | Periodo: 5 | Sala: C
+
+Curso 7:
+  Dia: 3 | Periodo: 4 | Sala: C
+  Dia: 0 | Periodo: 8 | Sala: C
+  Dia: 1 | Periodo: 2 | Sala: F
+  Dia: 0 | Periodo: 7 | Sala: O
+  Dia: 1 | Periodo: 3 | Sala: O
+  Dia: 2 | Periodo: 2 | Sala: O
+
+Curso 8:
+  Dia: 3 | Periodo: 6 | Sala: O
+  Dia: 4 | Periodo: 1 | Sala: O
+  Dia: 2 | Periodo: 0 | Sala: LUF2
+  Dia: 3 | Periodo: 4 | Sala: LUF2
+  Dia: 1 | Periodo: 4 | Sala: F
+  Dia: 3 | Periodo: 7 | Sala: O
+
+Curso 9:
+  Dia: 4 | Periodo: 5 | Sala: O
+  Dia: 3 | Periodo: 2 | Sala: O
+  Dia: 2 | Periodo: 0 | Sala: O
+  Dia: 1 | Periodo: 2 | Sala: O
+  Dia: 1 | Periodo: 1 | Sala: O
+
+Curso 10:
+  Dia: 3 | Periodo: 2 | Sala: G
+  Dia: 3 | Periodo: 4 | Sala: G
+  Dia: 2 | Periodo: 2 | Sala: G
+  Dia: 0 | Periodo: 6 | Sala: O
+  Dia: 1 | Periodo: 8 | Sala: G
+
+Curso 11:
+  Dia: 1 | Periodo: 4 | Sala: O
+  Dia: 2 | Periodo: 3 | Sala: O
+  Dia: 3 | Periodo: 4 | Sala: O
+  Dia: 0 | Periodo: 2 | Sala: O
+  Dia: 2 | Periodo: 0 | Sala: F
+
+Curso 12:
+  Dia: 4 | Periodo: 2 | Sala: LUF2
+  Dia: 0 | Periodo: 5 | Sala: LUF2
+  Dia: 1 | Periodo: 5 | Sala: LUF2
+  Dia: 2 | Periodo: 1 | Sala: LUF2
+  Dia: 0 | Periodo: 4 | Sala: LUF2
+  Dia: 1 | Periodo: 6 | Sala: LUF2
+
+Curso 13:
+  Dia: 3 | Periodo: 1 | Sala: LUF2
+  Dia: 4 | Periodo: 3 | Sala: LUF2
+  Dia: 2 | Periodo: 5 | Sala: LUF2
+  Dia: 0 | Periodo: 3 | Sala: LUF2
+  Dia: 1 | Periodo: 7 | Sala: LUF2
+  Dia: 3 | Periodo: 0 | Sala: LUF2
+
+Curso 14:
+  Dia: 4 | Periodo: 4 | Sala: LUF2
+  Dia: 3 | Periodo: 3 | Sala: LUF2
+  Dia: 2 | Periodo: 4 | Sala: LUF2
+
+Curso 15:
+  Dia: 4 | Periodo: 4 | Sala: O
+  Dia: 1 | Periodo: 7 | Sala: O
+  Dia: 1 | Periodo: 0 | Sala: O
+  Dia: 3 | Periodo: 1 | Sala: O
+  Dia: 2 | Periodo: 4 | Sala: O
+  Dia: 0 | Periodo: 5 | Sala: O
+
+Curso 16:
+  Dia: 0 | Periodo: 5 | Sala: F
+  Dia: 2 | Periodo: 5 | Sala: F
+  Dia: 3 | Periodo: 3 | Sala: O
+  Dia: 4 | Periodo: 7 | Sala: O
+  Dia: 2 | Periodo: 1 | Sala: O
+  Dia: 0 | Periodo: 3 | Sala: O
+
+Curso 17:
+  Dia: 4 | Periodo: 1 | Sala: LUF2
+  Dia: 2 | Periodo: 2 | Sala: LUF2
+  Dia: 3 | Periodo: 7 | Sala: LUF2
+  Dia: 0 | Periodo: 2 | Sala: LUF2
+  Dia: 1 | Periodo: 3 | Sala: LUF2
+  Dia: 2 | Periodo: 6 | Sala: LUF2
+
+Curso 18:
+  Dia: 4 | Periodo: 6 | Sala: LUF2
+  Dia: 3 | Periodo: 6 | Sala: LUF2
+  Dia: 0 | Periodo: 1 | Sala: LUF2
+  Dia: 2 | Periodo: 3 | Sala: LUF2
+  Dia: 1 | Periodo: 1 | Sala: LUF2
+
+Curso 19:
+  Dia: 4 | Periodo: 3 | Sala: O
+  Dia: 2 | Periodo: 7 | Sala: O
+  Dia: 1 | Periodo: 8 | Sala: O
+  Dia: 3 | Periodo: 8 | Sala: O
+  Dia: 0 | Periodo: 0 | Sala: O
+
+Curso 20:
+  Dia: 3 | Periodo: 1 | Sala: F
+  Dia: 3 | Periodo: 0 | Sala: O
+  Dia: 4 | Periodo: 2 | Sala: O
+  Dia: 2 | Periodo: 5 | Sala: O
+  Dia: 0 | Periodo: 7 | Sala: F
+
+Curso 21:
+  Dia: 1 | Periodo: 2 | Sala: LUF2
+  Dia: 4 | Periodo: 0 | Sala: LUF2
+  Dia: 3 | Periodo: 2 | Sala: LUF2
+  Dia: 0 | Periodo: 6 | Sala: LUF2
+  Dia: 4 | Periodo: 5 | Sala: LUF2
+  Dia: 1 | Periodo: 4 | Sala: LUF2
+
+Curso 22:
+  Dia: 1 | Periodo: 5 | Sala: G
+  Dia: 1 | Periodo: 6 | Sala: G
+  Dia: 2 | Periodo: 5 | Sala: G
+  Dia: 0 | Periodo: 2 | Sala: G
+  Dia: 0 | Periodo: 6 | Sala: G
+  Dia: 4 | Periodo: 4 | Sala: G
+
+Curso 23:
+  Dia: 0 | Periodo: 1 | Sala: G
+  Dia: 1 | Periodo: 4 | Sala: G
+  Dia: 1 | Periodo: 1 | Sala: G
+  Dia: 2 | Periodo: 8 | Sala: G
+  Dia: 4 | Periodo: 5 | Sala: G
+  Dia: 0 | Periodo: 7 | Sala: G
+  Dia: 2 | Periodo: 7 | Sala: G
+  Dia: 1 | Periodo: 2 | Sala: G
+  Dia: 2 | Periodo: 6 | Sala: G
+
+Curso 24:
+  Dia: 2 | Periodo: 1 | Sala: G
+  Dia: 2 | Periodo: 3 | Sala: G
+  Dia: 3 | Periodo: 1 | Sala: G
+  Dia: 4 | Periodo: 1 | Sala: G
+
+Curso 25:
+  Dia: 0 | Periodo: 1 | Sala: F
+  Dia: 3 | Periodo: 3 | Sala: F
+  Dia: 0 | Periodo: 6 | Sala: F
+  Dia: 1 | Periodo: 1 | Sala: F
+  Dia: 1 | Periodo: 7 | Sala: F
+  Dia: 2 | Periodo: 6 | Sala: F
+  Dia: 3 | Periodo: 2 | Sala: F
+
+Curso 26:
+  Dia: 0 | Periodo: 2 | Sala: F
+  Dia: 1 | Periodo: 0 | Sala: F
+
+Curso 27:
+  Dia: 1 | Periodo: 8 | Sala: LUF2
+  Dia: 0 | Periodo: 7 | Sala: LUF2
+  Dia: 2 | Periodo: 7 | Sala: LUF2
+
+Curso 28:
+  Dia: 4 | Periodo: 2 | Sala: G
+  Dia: 1 | Periodo: 0 | Sala: G
+  Dia: 2 | Periodo: 0 | Sala: G
+  Dia: 3 | Periodo: 0 | Sala: G
+  Dia: 4 | Periodo: 0 | Sala: G
+  Dia: 3 | Periodo: 6 | Sala: G
+
+Curso 29:
+  Dia: 4 | Periodo: 3 | Sala: G
+  Dia: 2 | Periodo: 4 | Sala: G
+  Dia: 3 | Periodo: 5 | Sala: G
+  Dia: 3 | Periodo: 7 | Sala: G
+

@@ -1,6 +1,8 @@
 #include "lectura.h"
 #include "greedy.h"
+#include "greedy2.h"
 #include "restricciones.h"
+#include "f_eval.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -48,7 +50,8 @@ vector<string> obtenerArchivos(const string& ruta) {
     return archivos;
 }
 
-bool guardarSolucion(const Solucion& S,const string& ruta, const string& nombreArchivo) {
+
+bool guardarSolucion(const Solucion& S,const string& ruta, const string& nombreArchivo, int eval, Instancia instancia) {
 
     string nombre = nombreArchivo;
     bool vacia = true;
@@ -64,7 +67,6 @@ bool guardarSolucion(const Solucion& S,const string& ruta, const string& nombreA
         nombre = "ERROR_" + nombre;
     }
 
-    // Construir la ruta completa
     string rutaCompleta = ruta + "/" + nombre;
 
     ofstream archivo(rutaCompleta);
@@ -75,7 +77,6 @@ bool guardarSolucion(const Solucion& S,const string& ruta, const string& nombreA
         return false;
     }
 
-    // Escribir solución
     for (size_t i = 0; i < S.cursos.size(); ++i) {
 
         archivo << "Curso " << i << ":" << endl;
@@ -91,10 +92,18 @@ bool guardarSolucion(const Solucion& S,const string& ruta, const string& nombreA
         archivo << endl;
     }
 
+    archivo << "H1: " << validarH1(instancia, S) << endl;
+    archivo << "H2: " << validarH2(instancia, S) << endl;
+    archivo << "H3: " << validarH3(instancia, S) << endl;
+    archivo << "H4: " << validarH4(instancia, S) << endl;
+    archivo <<"f_eval(S) = " << eval << endl;
+
     archivo.close();
     cout<<"Archivo creado en " << rutaCompleta<<"\n";
     return true;
 }
+
+
 
 
 int main() {
@@ -110,11 +119,11 @@ int main() {
             cerr << "Error al leer la instancia." << endl;
             return 1;
         }
-
+        cout<<"Instancia extraida\n";
         //imprimirInstancia(instancia);
 
         //Generación solución incial
-        Solucion S = greedy(instancia);
+        Solucion S = greedy2(instancia);
 
         bool vacia = true;
         for (const auto& curso : S.cursos) {
@@ -123,12 +132,57 @@ int main() {
                 break;
             }
         }
+
+
         if(vacia){
             cout<<"\n\nSin solución para "<< arch<<"\n";
         }else{
             cout<<"\n\nSolucion encontrada para "<< arch<<"\n";
         }
-        guardarSolucion(S, "./OUTPUTS", archivos[i]);
+        int eval = f_eval(instancia, S);
+    guardarSolucion(S, "./OUTPUTS", archivos[i], eval, instancia);
     }
     return 0;
 }
+
+
+/*
+int main() {
+    string nombre = "comp02.ctt";
+
+    Instancia instancia;
+    string arch = rutaInstancias + nombre;
+    cout<<"Iniciando lectura de:  "<<nombre<<"\n";
+    //Lectura de la instancia
+    if (!extraerInstancia(arch, instancia)) {
+        cerr << "Error al leer la instancia." << endl;
+        return 1;
+    }
+    cout<<"Instancia extraida\n";
+    //imprimirInstancia(instancia);
+
+    //Generación solución incial
+    Solucion S = greedy2(instancia);
+
+    bool vacia = true;
+    for (const auto& curso : S.cursos) {
+        if (!curso.empty()) {
+            vacia = false;
+            break;
+        }
+    }
+
+    
+    if(vacia){
+        cout<<"\n\nSin solución para "<< arch<<"\n";
+    }else{
+        cout<<"\n\nSolucion encontrada para "<< arch<<"\n";
+    }
+    int eval = f_eval(instancia, S);
+    guardarSolucion(S, "./OUTPUTS", nombre, eval, instancia);
+
+
+    return 0;
+}
+    
+ */   
